@@ -22,6 +22,7 @@ const Reservation = () => {
                         <div className="input-group">
                             <Input name="name" label="Nome" required />
                             <Input name="email" label="Email" type="email" required />
+                            <Input name="phone" label="celular" type="tel" required />
                             <Input
                                 name="persons"
                                 label="Acompanhantes"
