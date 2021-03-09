@@ -1,6 +1,5 @@
 import React, { SelectHTMLAttributes } from 'react';
-import { isUnparsedTextLike } from 'typescript';
-import './styles.css'
+import './styles.css';
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
     label: string,
