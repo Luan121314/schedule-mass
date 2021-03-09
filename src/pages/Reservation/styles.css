@@ -1,0 +1,23 @@
+.reservation-container .main header .verse{
+    font-size: 0.87rem;
+    font-weight: 600;
+}
+
+.reservation-container .main .form-content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.reservation-container .main .form-content .input-group{
+    width: 80%;
+}
+
+@media(max-width:960px){
+    .reservation-container .main .form-content .input-group{
+        width: 100%;
+    }
+}
+ 

@@ -1,0 +1,17 @@
+.button-component{
+    padding: 5px 20px;
+    border-radius: 8px;
+    /* outline-width: none; */
+    border: 2px solid #e89388;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 10px;
+
+}
+
+.button-component:hover{
+    transition: 0.2s;
+    background-color: #ffab9f;
+    cursor: pointer;
+}
