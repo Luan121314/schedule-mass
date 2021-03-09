@@ -3,7 +3,7 @@ import './styles.css'
 
 const Alert:React.FC =({children}) =>{
     return(
-        <div className="container-alert">
+        <div className="alert container-alert">
             <div className="content" >
                 {children}
             </div>

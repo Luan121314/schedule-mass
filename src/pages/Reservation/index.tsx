@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { FormEvent } from 'react';
+import { useHistory } from 'react-router';
 import Alert from '../../components/Alert';
 import Button from '../../components/inputs/Button';
 import Input from '../../components/inputs/Input';
@@ -7,6 +8,13 @@ import Layout from '../../Layout';
 import './styles.css';
 
 const Reservation = () => {
+    const history = useHistory();
+
+    function handleCreateReservation(e : FormEvent){
+        e.preventDefault();
+        history.push('/reservations/fake')
+    }
+
     return (
         <Layout>
             <div className="reservation-container">
@@ -42,7 +50,11 @@ const Reservation = () => {
                                 ]}
                             />
                         </div>
-                        <Button name="reserve" label="Reservar" />
+                        <Button 
+                        name="reserve" 
+                        label="Reservar"
+                        onClick={handleCreateReservation}
+                         />
 
                     </form>
                 </main>
