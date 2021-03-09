@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {FaAngleRight} from 'react-icons/fa'
-import churchImg from './../../assets/images/church01.png'
+import churchImg from './../../assets/images/church.png'
 import './styles.css'
 
 const Home = () => {

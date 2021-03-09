@@ -19,9 +19,10 @@
     font-weight: 700;
 }
 
-/* .home-container .logo img{
-    width: 40rem;
-} */
+.home-container .logo img{
+    width: 30rem;
+    object-fit: contain;
+}
 
 .home-container .content{
     background-color: var(--secondary-color);
@@ -71,6 +72,9 @@
     }
     .home-container .logo {
         padding: 40px 20px;
+    }
+    .home-container .logo img{
+        width: 20rem;
     }
     .home-container .logo .title{
         font-size: 0.95rem;
