@@ -13,13 +13,14 @@
 .select-component > select{
     width: 70%;
     border-radius: 8px;
-    padding: 10px 40px;
+    padding: 10px;
     border: none;
     box-shadow: 0px 1px 2px #000c;
 }
 .select-component > select > option{
-    padding: 0 10px;
+    padding: 10px;
     border-radius: 8px;
+    margin-bottom: 1rem;
 
 }
 
