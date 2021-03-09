@@ -42,7 +42,7 @@
 }
 
 .container > footer .contact{
-    background-color: var(--tertiary-color);
+    background-color: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;
