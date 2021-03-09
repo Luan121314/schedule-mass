@@ -2,6 +2,7 @@ import React from 'react';
 import Alert from '../../components/Alert';
 import Button from '../../components/inputs/Button';
 import Input from '../../components/inputs/Input';
+import Select from '../../components/inputs/Select';
 import Layout from '../../Layout';
 import './styles.css';
 
@@ -28,6 +29,16 @@ const Reservation = () => {
                                 required
                                 min={0}
                                 max={4}
+                            />
+                            <Select
+                                label="Comunidade"
+                                name="community"
+                                options={[
+                                    "São Paulo",
+                                    "São José",
+                                    "São Joaquin",
+                                    "Sagrado Coração"
+                                ]}
                             />
                         </div>
                         <Button name="reserve" label="Reservar" />
