@@ -51,7 +51,7 @@
 }
 
 .container > footer .contact .title {
-    color: var(--secondary-color);
+    color: var(--text-color);
     margin: 20px 0;
 }
 
