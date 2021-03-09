@@ -3,6 +3,7 @@ import { useHistory } from 'react-router';
 import Alert from '../../components/Alert';
 import Button from '../../components/inputs/Button';
 import Layout from '../../Layout';
+// import {} from 'react-icons/package.json'
 import './styles.css';
 
 
@@ -27,7 +28,11 @@ const ReservationFinal = () => {
                             <span><strong>Email: </strong> luan.staner@gmail.com</span>
                             <span><strong>Celular: </strong> 11 968979457</span>
                             <span><strong>Reservas: </strong> 2</span>
+                            <span><strong>Comunidade: </strong> São Joaquin</span>
+                            <span><strong>Endereço: </strong> Rua Freguesia de São Romão, 34</span>
+                            <span><strong>Horário: </strong> 18h45</span>
                         </div>
+
 
                         <div className="password">
                             <span>Essa é sua senha, apresente na entrada.</span>
