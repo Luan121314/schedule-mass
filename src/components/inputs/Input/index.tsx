@@ -10,7 +10,7 @@ const Input: React.FC<InputProps> = ({ label, name, ...rest }) => {
     return (
         <div className="input-component" key={name} >
             <label htmlFor={`input-${name}`}>{label}</label>
-            <input name={name} type="text" {...rest} />
+            <input name={name} type="text" {...rest}   />
         </div>
     )
 }

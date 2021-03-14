@@ -1,17 +1,31 @@
-import React from 'react';
-import { useHistory } from 'react-router';
+import React, { useEffect, useState } from 'react';
+import { useHistory, useParams } from 'react-router';
 import Alert from '../../components/Alert';
 import Button from '../../components/inputs/Button';
+import { ReservationProps } from '../../interfaces';
 import Layout from '../../Layout';
-// import {} from 'react-icons/package.json'
+import api from '../../services/api';
 import './styles.css';
 
-
 const ReservationFinal = () => {
-    const history = useHistory()
+    const history = useHistory();
+    const params = useParams<{ id: string }>();
+    const [reservation, setReservation] = useState<ReservationProps>()
 
     function handleRedirectToPageHome() {
         history.push('/')
+    }
+
+    function handleLoadReservation() {
+        api.get<ReservationProps>(`reservations/${params.id}`).then(response => {
+            setReservation(response.data)
+        })
+    }
+
+    useEffect(handleLoadReservation, [params]);
+
+    if(!reservation){
+        return<></>
     }
 
     return (
@@ -24,15 +38,14 @@ const ReservationFinal = () => {
 
                     <div className="content">
                         <div className="data">
-                            <span><strong>Nome: </strong> Luan Correia Neves</span>
-                            <span><strong>Email: </strong> luan.staner@gmail.com</span>
-                            <span><strong>Celular: </strong> 11 968979457</span>
-                            <span><strong>Reservas: </strong> 2</span>
-                            <span><strong>Comunidade: </strong> São Joaquin</span>
-                            <span><strong>Endereço: </strong> Rua Freguesia de São Romão, 34</span>
+                            <span><strong>Nome: </strong> {reservation?.user.name}</span>
+                            <span><strong>Email: </strong> {reservation?.user.email}</span>
+                            <span><strong>Celular: </strong> {reservation?.user.phone}</span>
+                            <span><strong>Reservas: </strong> {reservation?.companion === 0 ? 'Apenas uma' : `Eu + ${reservation.companion}` }</span>
+                            <span><strong>Comunidade: </strong> {reservation?.community.name}</span>
+                            <span><strong>Endereço: </strong> {reservation?.community.address}</span>
                             <span><strong>Horário: </strong> 18h45</span>
                         </div>
-
 
                         <div className="password">
                             <span>Essa é sua senha, apresente na entrada.</span>
