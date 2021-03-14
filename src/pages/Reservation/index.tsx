@@ -115,7 +115,7 @@ const Reservation = () => {
                                 options={communities.map(community => (
                                     {
                                         value: community.id,
-                                        label: community.name
+                                        label: `${community.name} às ${community.time}`
                                     }
                                 ))}
                             />

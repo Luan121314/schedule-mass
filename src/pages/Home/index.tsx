@@ -27,7 +27,7 @@ const Home = () => {
                     alt=""
                     className="img-logo"
                 />
-                <span className="title" >Paróquia São Joaquin</span>
+                <span className="title" >{manifest.title}</span>
             </div>
             <div className="content">
                 <div>

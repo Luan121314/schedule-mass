@@ -1,6 +1,7 @@
 export interface CommunityProps {
     id: string,
     name: string,
+    time: string,
     capacity: number,
     limiter: number,
     reservation: number,

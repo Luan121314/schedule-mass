@@ -44,13 +44,13 @@ const ReservationFinal = () => {
                             <span><strong>Reservas: </strong> {reservation?.companion === 0 ? 'Apenas uma' : `Eu + ${reservation.companion}` }</span>
                             <span><strong>Comunidade: </strong> {reservation?.community.name}</span>
                             <span><strong>Endereço: </strong> {reservation?.community.address}</span>
-                            <span><strong>Horário: </strong> 18h45</span>
+                            <span><strong>Horário: </strong> {reservation.community.time}</span>
                         </div>
 
                         <div className="password">
                             <span>Essa é sua senha, apresente na entrada.</span>
                             <div className="text-password">
-                                <Alert>bvebv</Alert>
+                                <Alert>{reservation.password}</Alert>
                             </div>
                         </div>
                         <h2>Caso precise você pode pegar essas informações no seu email</h2>
