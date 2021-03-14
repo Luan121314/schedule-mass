@@ -1,13 +1,14 @@
 import React from 'react';
-import { FaChurch, FaFacebook, FaHeart, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
+import { FaChurch, FaFacebook, FaHeart, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
+import manifest from '../manifest';
 import './styles.css';
 
 const Layout: React.FC = ({ children }) => {
     return (
         <div className="container">
             <header>
-                <span className="title" >Paróquia São Joaquin</span>
+                <span className="title" >{manifest.title}</span>
                 <FaChurch size={30} />
             </header>
             <main className="content-main">
@@ -18,22 +19,19 @@ const Layout: React.FC = ({ children }) => {
 
                     <span className="title" >Nossas redes sociais</span>
                     <div className="content-contact">
-                        <a target="_blank" rel="noopener noreferrer" href='https://wa.me/5511948396907/?text=Olá podemos conversar ? Aguardo seu retorno !' >
+                        <a target="_blank" rel="noopener noreferrer" href={`https://wa.me/${manifest.socialNetwork.whatsApp}/?text=Olá podemos conversar ? Aguardo seu retorno !`} >
                             <FaWhatsapp color="#34af23" size={35} />
                         </a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://pt-br.facebook.com/paroquiasaojoaquin" >
+                        <a target="_blank" rel="noopener noreferrer" href={`https://pt-br.facebook.com/${manifest.socialNetwork.facebook}`} >
                             <FaFacebook color="#3b5998" size={35} />
                         </a>
 
-                        <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/paroquiasaojoaquin" >
+                        <a target="_blank" rel="noopener noreferrer" href={`https://instagram.com/${manifest.socialNetwork.instagram}`} >
                             <FaInstagram color="#3f729b" size={35} />
                         </a>
 
-                        <a target="_blank" rel="noopener noreferrer" href="mailto:paroquiasaojoaquin.contato@gmail.com" >
+                        <a target="_blank" rel="noopener noreferrer" href={`mailto:${manifest.socialNetwork.email}`} >
                             <SiGmail color="#dd4b39" size={35} />
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/paroquiasaojoaquin" >
-                            <FaTwitter color="#00aced" size={35} />
                         </a>
                     </div>
                 </div>
