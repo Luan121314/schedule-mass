@@ -1,0 +1,17 @@
+.reservationCancel-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.reservationCancel-container header{
+    margin: 20px 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.reservationCancel-container .content .data{
+    display: flex;
+    flex-direction: column;
+    
+}

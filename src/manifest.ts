@@ -1,6 +1,6 @@
 const manifest = {
     limitation:30,
-    title: "Paróquia São Joaquin",
+    title: "Paróquia São Joaquim",
     socialNetwork:{
         instagram: "paroquia.desaojoaquim", 
         facebook: "paroquiadsaojoaquim",
