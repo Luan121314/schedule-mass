@@ -7,6 +7,7 @@ import Input from '../../components/inputs/Input';
 import Select from '../../components/inputs/Select';
 import { AxiosErrorRequest, CommunityProps, ReservationProps } from '../../interfaces';
 import Layout from '../../Layout';
+import manifest from '../../manifest';
 import api from '../../services/api';
 import reservationValidation from '../../validation/reservationValidation';
 import './styles.css';
@@ -75,6 +76,7 @@ const Reservation = () => {
                                 name="name"
                                 label="Nome"
                                 required
+                                placeholder="Nome Completo"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                             />
@@ -83,6 +85,7 @@ const Reservation = () => {
                                 name="email"
                                 label="Email"
                                 type="email"
+                                placeholder={manifest.socialNetwork.email}
                                 required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -92,6 +95,7 @@ const Reservation = () => {
                                 name="phone"
                                 label="Celular"
                                 type="tel"
+                                placeholder={manifest.socialNetwork.whatsApp}
                                 required
                                 value={phone}
                                 onChange={(e) => setPhone(e.target.value)}
@@ -102,6 +106,7 @@ const Reservation = () => {
                                 label="Acompanhantes"
                                 type="number"
                                 required
+                                placeholder="maximo 4"
                                 min={0}
                                 max={4}
                                 value={companion}
